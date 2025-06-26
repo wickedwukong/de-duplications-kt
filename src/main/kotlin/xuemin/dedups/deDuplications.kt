@@ -15,7 +15,6 @@ fun deDuplications(listOfStrings: List<String>, limit: Int): List<String> {
                 i++
             }
         } else {
-            // If we are at the end of the list, we can just add the remaining elements
             result.add(currentValue)
             i++
         }
@@ -23,6 +22,6 @@ fun deDuplications(listOfStrings: List<String>, limit: Int): List<String> {
     return result.toList()
 }
 
-fun isDuplicates(currentWithLookAhead: List<String>): Boolean {
+private fun isDuplicates(currentWithLookAhead: List<String>): Boolean {
     return currentWithLookAhead.toSet().size == 1
 }
