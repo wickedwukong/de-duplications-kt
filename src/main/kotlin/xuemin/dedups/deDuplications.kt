@@ -15,8 +15,8 @@ fun deDuplications(listOfStrings: List<String>, limit: Int): List<String> {
                 i++
             }
         } else {
-            result.add(currentValue)
-            i++
+            result.addAll(listOfStrings.subList(i, listOfStrings.size))
+            i = listOfStrings.size
         }
     }
     return result.toList()
